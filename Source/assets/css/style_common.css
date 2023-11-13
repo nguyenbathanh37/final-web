@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300&family=Oswald:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    transition: 0.3s linear;
+}
+:root{
+    --backgournd: #fff;
+    --icon-color: #B08D8D;
+
+}
+/* main btn-main */
+.btn-main{
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem 2.5rem;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 18px;
+  border: 3px solid #E82F2F;
+  background-color: #E82F2F;
+  color:#fff ;
+  transition: .4s ease;
+  z-index: 99;
+}
+.btn-main:hover{
+  z-index: 1;
+  border-color: transparent;
+  background: linear-gradient(
+      90deg,
+      #f9d923,
+      #00a19d,
+      #0c97b7,
+      #cb49ff,
+      #ff6666,
+      #f9d923
+  );
+  background-size: 400%;
+  box-shadow: 0 0 15px rgb(2,4,24);
+  animation: glow 12s linear forwards;
+
+}
+@keyframes glow{
+  from{
+      background-position: 0%;
+  }
+  to{
+      background-position: 400%;
+  }
+}
+.btn-main::before{
+  content:'';
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  background: inherit;
+  filter: blur(36px);
+  z-index: -1;
+  opacity: 0;
+  transition: .4s ease-out;
+}
+/* btn-main */
+
+/* CSS */
+.button-52 {
+    color: white;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-52:after {
+  content: "";
+  background-color: #e74b30;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}
+
+
+/* CSS */
+.button-6 {
+  align-items: center;
+  background-color: #f1c1c1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+

@@ -1,0 +1,668 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300&family=Oswald:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    
+}
+:root{
+    --backgournd: #fff;
+    --icon-color: #B08D8D;
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(131,58,180);
+background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.sign-in-btn{
+    margin: 10px -1px ;
+    width: 100%;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sign-in-board
+{
+    width: 420px;
+    height: 520px;
+    background-color:  var(--backgournd);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgb(121, 122, 134);
+
+    
+}
+.main-title{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.icon-background{
+    color: var(--icon-color);
+}
+.btn{
+    cursor: pointer;
+    position: relative;
+    
+    padding: 0.5rem 2.5rem;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 18px;
+    border: 3px solid #E82F2F;
+    background-color: #E82F2F;
+    color:#fff ;
+    transition: .4s ease;
+    z-index: 99;
+}
+.btn:hover{
+    z-index: 1;
+    border-color: transparent;
+    background: linear-gradient(
+        90deg,
+        #f9d923,
+        #00a19d,
+        #0c97b7,
+        #cb49ff,
+        #ff6666,
+        #f9d923
+    );
+    background-size: 400%;
+    box-shadow: 0 0 15px rgb(2,4,24);
+    animation: glow 12s linear forwards;
+
+}
+@keyframes glow{
+    from{
+        background-position: 0%;
+    }
+    to{
+        background-position: 400%;
+    }
+}
+.btn::before{
+    content:'';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    background: inherit;
+    filter: blur(36px);
+    z-index: -1;
+    opacity: 0;
+    transition: .4s ease-out;
+}
+.second-btn {
+    background-color: #e58484 !important;
+    border: transparent !important;
+    color: #fff;
+    
+}
+
+.main-title{
+    font-weight:bold;
+}
+.stick{
+    width: 80%;
+    height: 4px;
+    margin: 10px 0 ;
+    z-index: 1;
+    background: linear-gradient(
+        90deg,
+        #f9d923,
+        #00a19d,
+        #0c97b7,
+        #cb49ff,
+        #ff6666,
+        #f9d923
+    );
+    background-size: 400%;
+    animation: glow 12s linear infinite;
+
+}
+/* input boxes */
+.input-box{
+    position: relative;
+    margin: 10px;
+}
+.form-input{
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    transition: .25s ease;
+    margin: 10px 0;
+}
+.form-input:focus,.form-input:hover{
+    border: 1px solid black !important;
+}
+.input-label{
+    position: absolute;
+    top: 10%;
+    transform: translateY(50%);
+    left: 21px;
+    pointer-events: none;
+    user-select: none;
+    color: #B08D8D;
+    transition: .25s ease;
+
+}
+.form-input:not(:placeholder-shown) + .input-label,
+.form-input:focus + .input-label{
+    top: -15px;
+    padding: 0 10px;
+    display: inline-block;
+    background-color: var(--backgournd);
+    color: black;
+
+}
+
+.error-message{
+    position: absolute;
+    font-size: 16px;
+    font-weight:lighter;
+    color: red;
+    bottom: -15px;
+    right: 0;
+}
+
+
+.show-password-check-box{
+    margin: 0 0 10px 0;
+    color: var(--icon-color);
+    user-select: none;
+
+}
+#remember-me   {
+}
+footer{
+    margin-top: 50px;
+}
+.footer-title{
+    text-align: center;
+    color: var(--icon-color);
+    font-weight: bolder;
+}
+.footer-desc{
+    text-align: center;
+    color: var(--icon-color);
+    font-weight:lighter;
+    margin: 0 0 20px 0 ;
+}
+
+
+/* sign up */
+
+#sign-up-board{
+    width: 1220px;
+    height: 520px;
+    background-color:  var(--backgournd);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgb(121, 122, 134);
+    position: relative;
+}
+.left-side,.right-side{
+    position: absolute;
+    width: 50%;
+    padding: 20px;
+    top: 0;
+}
+.left-side{
+    left: 0;
+}
+.right-side{
+    text-align: center;
+    right: 0;
+    height: 100%;
+    padding-top: 180px;
+    border-radius: 0 18px 18px 0 ;
+    background: rgb(249,36,139);
+    background: linear-gradient(302deg, rgba(249,36,139,1) 34%, rgba(247,206,228,1) 65%, rgba(195,231,232,0.6209034639246324) 90%);
+}
+.right-side-title{
+    margin-bottom: 10px;
+}
+.right-side-desc{
+    margin-top: 30%;
+}
+/* animation for right side */
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+@keyframes animate{
+    0%{
+        opacity: 1;
+        border-radius: 0;
+        transform: translateY(0) rotate(0deg);
+    }
+    100%{
+        opacity: 0;
+        border-radius: 50%;
+        transform: translateY(-1000px) rotate(720deg);
+    }
+}
+.circles div{
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.1);
+    bottom: -150px;
+    animation: animate 25s linear infinite;
+    border-radius: 24px;
+}
+.circles div:nth-child(1){
+    left: 25%;
+    width: 35px;
+    height: 35px;
+    animation-delay: 0;
+}
+.circles div:nth-child(2){
+    left: 10%;
+    width: 75px;
+    height: 75px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+.circles div:nth-child(3){
+    left: 70%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 4s;
+}
+.circles div:nth-child(4){
+    left: 70%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0;
+    animation-duration: 16s;
+}
+.circles div:nth-child(5){
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+}
+.circles div:nth-child(6){
+    left: 75%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 6s;
+    animation-duration: 12s;
+}
+.circles div:nth-child(7){
+    left: 35%;
+    width: 140px;
+    height: 140px;
+    animation-delay: 7s;
+}
+.circles div:nth-child(8){
+    left: 50%;
+    width: 75px;
+    height: 75px;
+    animation-delay: 14s;
+    animation-duration: 45s;
+}
+.circles div:nth-child(9){
+    left: 70%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 4s;
+}
+.circles div:nth-child(10){
+    left: 10%;
+    width: 75px;
+    height: 75px;
+    animation-delay: 0s;
+    animation-duration: 12s;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300&family=Oswald:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    
+}
+:root{
+    --backgournd: #fff;
+    --icon-color: #B08D8D;
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(131,58,180);
+background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.sign-in-btn{
+    margin: 10px -1px ;
+    width: 100%;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sign-in-board
+{
+    width: 420px;
+    height: 520px;
+    background-color:  var(--backgournd);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgb(121, 122, 134);
+
+    
+}
+.main-title{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.icon-background{
+    color: var(--icon-color);
+}
+.btn{
+    cursor: pointer;
+    position: relative;
+    
+    padding: 0.5rem 2.5rem;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 18px;
+    border: 3px solid #E82F2F;
+    background-color: #E82F2F;
+    color:#fff ;
+    transition: .4s ease;
+    z-index: 99;
+}
+.btn:hover{
+    z-index: 1;
+    border-color: transparent;
+    background: linear-gradient(
+        90deg,
+        #f9d923,
+        #00a19d,
+        #0c97b7,
+        #cb49ff,
+        #ff6666,
+        #f9d923
+    );
+    background-size: 400%;
+    box-shadow: 0 0 15px rgb(2,4,24);
+    animation: glow 12s linear forwards;
+
+}
+@keyframes glow{
+    from{
+        background-position: 0%;
+    }
+    to{
+        background-position: 400%;
+    }
+}
+.btn::before{
+    content:'';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    background: inherit;
+    filter: blur(36px);
+    z-index: -1;
+    opacity: 0;
+    transition: .4s ease-out;
+}
+.second-btn {
+    background-color: #e58484 !important;
+    border: transparent !important;
+    color: #fff;
+    
+}
+
+.main-title{
+    font-weight:bold;
+}
+.stick{
+    width: 80%;
+    height: 4px;
+    margin: 10px 0 ;
+    z-index: 1;
+    background: linear-gradient(
+        90deg,
+        #f9d923,
+        #00a19d,
+        #0c97b7,
+        #cb49ff,
+        #ff6666,
+        #f9d923
+    );
+    background-size: 400%;
+    animation: glow 12s linear infinite;
+
+}
+/* input boxes */
+.input-box{
+    position: relative;
+    margin: 10px;
+}
+.form-input{
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    transition: .25s ease;
+    margin: 10px 0;
+}
+.form-input:focus,.form-input:hover{
+    border: 1px solid black !important;
+}
+.input-label{
+    position: absolute;
+    top: 10%;
+    transform: translateY(50%);
+    left: 21px;
+    pointer-events: none;
+    user-select: none;
+    color: #B08D8D;
+    transition: .25s ease;
+
+}
+.form-input:not(:placeholder-shown) + .input-label,
+.form-input:focus + .input-label{
+    top: -15px;
+    padding: 0 10px;
+    display: inline-block;
+    background-color: var(--backgournd);
+    color: black;
+
+}
+
+.error-message{
+    position: absolute;
+    font-size: 16px;
+    font-weight:lighter;
+    color: red;
+    bottom: -15px;
+    right: 0;
+}
+
+
+.show-password-check-box{
+    margin: 0 0 10px 0;
+    color: var(--icon-color);
+    user-select: none;
+
+}
+#remember-me   {
+}
+footer{
+    margin-top: 50px;
+}
+.footer-title{
+    text-align: center;
+    color: var(--icon-color);
+    font-weight: bolder;
+}
+.footer-desc{
+    text-align: center;
+    color: var(--icon-color);
+    font-weight:lighter;
+    margin: 0 0 20px 0 ;
+}
+
+
+/* sign up */
+
+#sign-up-board{
+    width: 1220px;
+    height: 520px;
+    background-color:  var(--backgournd);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgb(121, 122, 134);
+    position: relative;
+}
+.left-side,.right-side{
+    position: absolute;
+    width: 50%;
+    padding: 20px;
+    top: 0;
+}
+.left-side{
+    left: 0;
+}
+.right-side{
+    text-align: center;
+    right: 0;
+    height: 100%;
+    padding-top: 180px;
+    border-radius: 0 18px 18px 0 ;
+    background: rgb(249,36,139);
+    background: linear-gradient(302deg, rgba(249,36,139,1) 34%, rgba(247,206,228,1) 65%, rgba(195,231,232,0.6209034639246324) 90%);
+}
+.right-side-title{
+    margin-bottom: 10px;
+}
+.right-side-desc{
+    margin-top: 30%;
+}
+/* animation for right side */
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+@keyframes animate{
+    0%{
+        opacity: 1;
+        border-radius: 0;
+        transform: translateY(0) rotate(0deg);
+    }
+    100%{
+        opacity: 0;
+        border-radius: 50%;
+        transform: translateY(-1000px) rotate(720deg);
+    }
+}
+.circles div{
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.1);
+    bottom: -150px;
+    animation: animate 25s linear infinite;
+    border-radius: 24px;
+}
+.circles div:nth-child(1){
+    left: 25%;
+    width: 35px;
+    height: 35px;
+    animation-delay: 0;
+}
+.circles div:nth-child(2){
+    left: 10%;
+    width: 75px;
+    height: 75px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+.circles div:nth-child(3){
+    left: 70%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 4s;
+}
+.circles div:nth-child(4){
+    left: 70%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0;
+    animation-duration: 16s;
+}
+.circles div:nth-child(5){
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+}
+.circles div:nth-child(6){
+    left: 75%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 6s;
+    animation-duration: 12s;
+}
+.circles div:nth-child(7){
+    left: 35%;
+    width: 140px;
+    height: 140px;
+    animation-delay: 7s;
+}
+.circles div:nth-child(8){
+    left: 50%;
+    width: 75px;
+    height: 75px;
+    animation-delay: 14s;
+    animation-duration: 45s;
+}
+.circles div:nth-child(9){
+    left: 70%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 4s;
+}
+.circles div:nth-child(10){
+    left: 10%;
+    width: 75px;
+    height: 75px;
+    animation-delay: 0s;
+    animation-duration: 12s;
+}
